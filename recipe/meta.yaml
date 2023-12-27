@@ -110,7 +110,6 @@ about:
   summary: Community contributed LangChain integrations.
   doc_url: https://api.python.langchain.com/en/stable/community_api_reference.html
   dev_url: https://github.com/langchain-ai/langchain/tree/master/libs/community
-  summary: Community contributed LangChain integrations.
   license: MIT
   license_file: LICENSE
 
