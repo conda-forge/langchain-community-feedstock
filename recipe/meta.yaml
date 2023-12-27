@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -110,7 +110,6 @@ about:
   summary: Community contributed LangChain integrations.
   doc_url: https://api.python.langchain.com/en/stable/community_api_reference.html
   dev_url: https://github.com/langchain-ai/langchain/tree/master/libs/community
-  summary: Community contributed LangChain integrations.
   license: MIT
   license_file: LICENSE
 
@@ -121,3 +120,4 @@ extra:
     - hwchase17
     - efriis
     - agola11
+    - pavelzw
