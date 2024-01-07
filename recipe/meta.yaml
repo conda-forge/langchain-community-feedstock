@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -120,3 +120,4 @@ extra:
     - hwchase17
     - efriis
     - agola11
+    - pavelzw
