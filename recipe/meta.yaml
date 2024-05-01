@@ -1,5 +1,5 @@
 {% set name = "langchain-community" %}
-{% set version = "0.0.34" %}
+{% set version = "0.0.36" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_community-{{ version }}.tar.gz
-  sha256: 96e9a807d9b4777820df5a970996f6bf3ad5632137bf0f4d863bd832bdeb2b0f
+  sha256: 97be9d00cf119c961e03ed226e04e670f51b5d42f5b05ffc3518598fa6d20c74
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8.1,<4.0
-    - langchain-core >=0.1.45,<0.2.0
+    - langchain-core >=0.1.48,<0.2.0
     - sqlalchemy >=1.4,<3
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
