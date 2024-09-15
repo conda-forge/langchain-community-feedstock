@@ -20,9 +20,9 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - langchain <0.3.0,>=0.2.16
+    - langchain <0.4.0,>=0.3.0
     - python >=3.8.1,<4.0
-    - langchain-core <0.3.0,>=0.2.38
+    - langchain-core <0.4.0,>=0.3.0
     - sqlalchemy >=1.4,<3
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
@@ -30,7 +30,8 @@ requirements:
     - aiohttp >=3.8.3,<4.0.0
     - tenacity >=8.1.0,<9.0.0
     - dataclasses-json >=0.5.7,<0.7
-    - langsmith >=0.1.0,<0.2.0
+    - pydantic-settings >=2.4.0,<3.0.0
+    - langsmith >=0.1.112,<0.2.0
 
 test:
   imports:
