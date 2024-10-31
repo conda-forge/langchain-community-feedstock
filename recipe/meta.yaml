@@ -1,5 +1,5 @@
 {% set name = "langchain-community" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_community-{{ version }}.tar.gz
-  sha256: bfb3f2b219aed21087e0ecb7d2ebd1c81401c02b92239e11645c822d5be63f80
+  sha256: 80c7e6491788449b8a6e7a31444ff8ebb5c32242f67a65aa33d56ad35a7b5b5c
 
 build:
   noarch: python
