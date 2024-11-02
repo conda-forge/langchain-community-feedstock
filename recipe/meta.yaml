@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/langchain_community-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_community-{{ version }}.tar.gz
   sha256: 345febbc972a08c97f09cce6cc07d039aa7d1348fe8efdace85335be6ac9cb7d
 
 build:
@@ -23,7 +23,7 @@ requirements:
     - langchain <0.4.0,>=0.3.4
     - python >=3.8.1,<4.0
     - langchain-core <0.4.0,>=0.3.1
-    - sqlalchemy >=1.4,<3
+    - sqlalchemy <2.0.36,>=1.4
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
     - numpy >=1.0.0,<2.0.0
