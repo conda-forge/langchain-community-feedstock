@@ -22,7 +22,7 @@ requirements:
   run:
     - langchain <0.4.0,>=0.3.4
     - python >=3.8.1,<4.0
-    - langchain-core <0.4.0,>=0.3.16
+    - langchain-core <0.4.0,>=0.3.17
     - sqlalchemy <2.0.36,>=1.4
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
