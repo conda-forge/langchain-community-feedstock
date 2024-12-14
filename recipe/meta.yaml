@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - langchain <0.4.0,>=0.3.4
-    - python >=3.8.1,<4.0
-    - langchain-core <0.4.0,>=0.3.16
+    - langchain <0.4.0,>=0.3.11
+    - python >={{ python_min }}
+    - langchain-core <0.4.0,>=0.3.24
     - sqlalchemy <2.0.36,>=1.4
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
@@ -41,6 +41,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/langchain-ai/langchain
