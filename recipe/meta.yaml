@@ -1,5 +1,7 @@
 {% set name = "langchain-community" %}
 {% set version = "0.3.16" %}
+{% set build = "1" %}
+{% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +14,8 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: {{ build }}
+  string: "pymin{{ python_min|replace('.', '') }}_h{{ PKG_HASH }}_{{ build }}"
 
 requirements:
   host:
@@ -21,12 +24,16 @@ requirements:
     - pip
   run:
     - langchain >=0.3.16,<0.4.0
-    - python >={{ python_min }}
+    - python >={{ python_min }}{{ python_max }}
     - langchain-core >=0.3.32,<0.4.0
     - sqlalchemy >=1.4,<3
     - requests >=2.0.0,<3.0.0
     - pyyaml >=5.3
+    {% if python_max == "" %}
+    - numpy >=1.22.4,<3
+    {% else %}
     - numpy >=1.22.4,<2
+    {% endif %}
     - aiohttp >=3.8.3,<4.0.0
     - tenacity >=8.1.0,!=8.4.0,<10
     - dataclasses-json >=0.5.7,<0.7
