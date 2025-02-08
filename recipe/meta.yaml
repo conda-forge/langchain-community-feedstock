@@ -1,6 +1,6 @@
 {% set name = "langchain-community" %}
-{% set version = "0.3.16" %}
-{% set build = "1" %}
+{% set version = "0.3.17" %}
+{% set build = 0 %}
 {% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_community-{{ version }}.tar.gz
-  sha256: 825709bc328e294942b045d0b7f55053e8e88f7f943576306d778cf56417126c
+  sha256: d8547a3d4f8307950be88ca638cd6ab1abe2440d0012e401a172ba4a39aa8044
 
 build:
   noarch: python
@@ -23,23 +23,23 @@ requirements:
     - poetry-core >=1.0.0
     - pip
   run:
-    - langchain >=0.3.16,<0.4.0
+    - langchain <1.0.0,>=0.3.18
     - python >={{ python_min }}{{ python_max }}
-    - langchain-core >=0.3.32,<0.4.0
-    - sqlalchemy >=1.4,<3
-    - requests >=2.0.0,<3.0.0
+    - langchain-core <1.0.0,>=0.3.34
+    - sqlalchemy <3,>=1.4
+    - requests <3,>=2
     - pyyaml >=5.3
     {% if python_max == "" %}
-    - numpy >=1.22.4,<3
+    - numpy <2,>=1.26.4
     {% else %}
     - numpy >=1.22.4,<2
     {% endif %}
-    - aiohttp >=3.8.3,<4.0.0
-    - tenacity >=8.1.0,!=8.4.0,<10
-    - dataclasses-json >=0.5.7,<0.7
-    - pydantic-settings >=2.4.0,<3.0.0
-    - langsmith >=0.1.125,<0.4
-    - httpx-sse >=0.4.0,<0.5.0
+    - aiohttp <4.0.0,>=3.8.3
+    - tenacity !=8.4.0,<10,>=8.1.0
+    - dataclasses-json <0.7,>=0.5.7
+    - pydantic-settings <3.0.0,>=2.4.0
+    - langsmith <0.4,>=0.1.125
+    - httpx-sse <1.0.0,>=0.4.0
 
 test:
   imports:
