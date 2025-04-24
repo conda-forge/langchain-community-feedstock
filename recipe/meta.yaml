@@ -1,6 +1,6 @@
 {% set name = "langchain-community" %}
 {% set version = "0.3.22" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
 package:
@@ -66,6 +66,7 @@ extra:
     - hinthornw
     - baskaryan
     - hwchase17
-    - efriis
+    - ccurme
+    - sydney-runkle
     - agola11
     - jan-janssen
