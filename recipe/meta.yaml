@@ -1,5 +1,5 @@
 {% set name = "langchain-community" %}
-{% set version = "0.3.25" %}
+{% set version = "0.3.26" %}
 {% set build = 0 %}
 {% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/langchain_community-{{ version }}.tar.gz
-  sha256: a536888a48b36184dee20df86d266827a01916397fb398af2088ab7c3dfee684
+  sha256: 49f9d71dc20bc42ccecd6875d02fafef1be0e211a0b22cecbd678f5fd3719487
 
 build:
   noarch: python
@@ -23,9 +23,9 @@ requirements:
     - pdm-backend
     - pip
   run:
-    - langchain <1.0.0,>=0.3.25
+    - langchain <1.0.0,>=0.3.26
     - python >={{ python_min }}{{ python_max }}
-    - langchain-core <1.0.0,>=0.3.65
+    - langchain-core <1.0.0,>=0.3.66
     - sqlalchemy <3,>=1.4
     - requests <3,>=2
     - pyyaml >=5.3
@@ -38,7 +38,7 @@ requirements:
     - tenacity !=8.4.0,<10,>=8.1.0
     - dataclasses-json <0.7,>=0.5.7
     - pydantic-settings <3.0.0,>=2.4.0
-    - langsmith <0.4,>=0.1.125
+    - langsmith >=0.1.125
     - httpx-sse <1.0.0,>=0.4.0
 
 test:
