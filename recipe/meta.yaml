@@ -1,6 +1,6 @@
 {% set name = "langchain-community" %}
 {% set version = "0.3.31" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set python_max = ",<3.12a0" if python_min == "3.10" else "" %}
 
 package:
@@ -29,11 +29,7 @@ requirements:
     - sqlalchemy >=1.4.0,<3.0.0
     - requests >=2.32.5,<3.0.0
     - pyyaml >=5.3.0,<7.0.0
-    {% if python_max == "" %}
     - numpy >=1.26.2
-    {% else %}
-    - numpy >=1.22.4,<2
-    {% endif %}
     - aiohttp >=3.8.3,<4.0.0
     - tenacity !=8.4.0,>=8.1.0,<10.0.0
     - dataclasses-json >=0.6.7,<0.7.0
