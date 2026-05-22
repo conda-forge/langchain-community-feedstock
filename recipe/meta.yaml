@@ -1,7 +1,7 @@
 {% set name = "langchain-community" %}
 {% set version = "0.3.31" %}
-{% set build = 1 %}
-{% set python_max = ",<3.12a0" if python_min == "3.10" else "" %}
+{% set build = 2 %}
+{% set python_max = ",<3.13" if python_min == "3.10" else "" %}
 
 package:
   name: {{ name|lower }}
